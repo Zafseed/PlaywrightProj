@@ -9,6 +9,19 @@ namespace PlaywrightProj
         public async Task SetUp()
         {
             await Page.GotoAsync("https://www.apple.com/mac/");
+
+            await Page.SetViewportSizeAsync(1920, 1080);
+
+            await Page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
+        }
+
+        [TearDown]
+        public async Task TearDown()
+        {
+            var failed = TestContext.CurrentContext.Result.Outcome == NUnit.Framework.Interfaces.ResultState.Error
+            || TestContext.CurrentContext.Result.Outcome == NUnit.Framework.Interfaces.ResultState.Failure;
+
+            await MakeScreenShotIfFailedAsync(failed, ".chapternav-wrapper");
         }
 
         [Test]
@@ -30,8 +43,6 @@ namespace PlaywrightProj
                 "Shop Mac"
             };
 
-            await Page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
-
             var ilElements = Page.Locator(".chapternav-label");
 
             var count = await ilElements.CountAsync();
@@ -46,14 +57,21 @@ namespace PlaywrightProj
         [Test]
         public async Task ContentBlockIsVisible()
         {
-            await Page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
-
             var ilElements = Page.Locator(".chapternav-label");
 
             var count = await ilElements.CountAsync();
 
             for (int i = 0; i < count; i++)
                 await Expect(ilElements.Nth(i)).ToBeVisibleAsync();
+        }
+
+        public async Task MakeScreenShotIfFailedAsync(bool failed, string blockToScreen)
+        {
+            if (failed)
+            {
+                await Page.WaitForSelectorAsync(blockToScreen);
+                await Page.Locator(blockToScreen).ScreenshotAsync(new() { Path = $"..\\..\\..\\Logs\\Screenshots\\Fail_{TestContext.CurrentContext.Test.Name}_{DateTime.Now:yyyy-dd-M--HH-mm-ss}.png" });
+            }
         }
     }
 }

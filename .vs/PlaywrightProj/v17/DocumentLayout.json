@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\Proj\\PlaywrightProj\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Proj\\PlaywrightProj\\.github\\workflows\\playwright.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.github\\workflows\\playwright.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Proj\\PlaywrightProj\\Tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B9FF4844-D045-0421-A628-905393976470}|PlaywrightProj.csproj|d:\\proj\\playwrightproj\\tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9FF4844-D045-0421-A628-905393976470}|PlaywrightProj.csproj|solutionrelative:tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,25 +19,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "playwright.yml",
-              "DocumentMoniker": "D:\\Proj\\PlaywrightProj\\.github\\workflows\\playwright.yml",
-              "RelativeDocumentMoniker": ".github\\workflows\\playwright.yml",
-              "ToolTip": "D:\\Proj\\PlaywrightProj\\.github\\workflows\\playwright.yml",
-              "RelativeToolTip": ".github\\workflows\\playwright.yml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-05-14T21:33:22.12Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Tests.cs",
               "DocumentMoniker": "D:\\Proj\\PlaywrightProj\\Tests.cs",
               "RelativeDocumentMoniker": "Tests.cs",
               "ToolTip": "D:\\Proj\\PlaywrightProj\\Tests.cs",
               "RelativeToolTip": "Tests.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwAwAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T15:14:18.999Z",
               "EditorCaption": ""

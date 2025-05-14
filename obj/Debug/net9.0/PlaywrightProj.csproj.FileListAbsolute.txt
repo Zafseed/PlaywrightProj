@@ -444,3 +444,4 @@ D:\Proj\PlaywrightProj\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Proj\PlaywrightProj\bin\Debug\net9.0\Microsoft.Playwright.dll
 D:\Proj\PlaywrightProj\bin\Debug\net9.0\Microsoft.Playwright.NUnit.dll
 D:\Proj\PlaywrightProj\bin\Debug\net9.0\Microsoft.Playwright.TestAdapter.dll
+D:\Proj\PlaywrightProj\obj\Debug\net9.0\PlaywrightProj.sourcelink.json
