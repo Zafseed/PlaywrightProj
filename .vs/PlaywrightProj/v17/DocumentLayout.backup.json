@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{B9FF4844-D045-0421-A628-905393976470}|PlaywrightProj.csproj|d:\\proj\\playwrightproj\\tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B9FF4844-D045-0421-A628-905393976470}|PlaywrightProj.csproj|solutionrelative:tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9FF4844-D045-0421-A628-905393976470}|PlaywrightProj.csproj|d:\\proj\\playwrightproj\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9FF4844-D045-0421-A628-905393976470}|PlaywrightProj.csproj|solutionrelative:logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9FF4844-D045-0421-A628-905393976470}|PlaywrightProj.csproj|d:\\proj\\playwrightproj\\logs\\log.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B9FF4844-D045-0421-A628-905393976470}|PlaywrightProj.csproj|solutionrelative:logs\\log.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +22,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "log.txt",
+              "DocumentMoniker": "D:\\Proj\\PlaywrightProj\\Logs\\log.txt",
+              "RelativeDocumentMoniker": "Logs\\log.txt",
+              "ToolTip": "D:\\Proj\\PlaywrightProj\\Logs\\log.txt",
+              "RelativeToolTip": "Logs\\log.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-05-18T17:09:40.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Logger.cs",
+              "DocumentMoniker": "D:\\Proj\\PlaywrightProj\\Logger.cs",
+              "RelativeDocumentMoniker": "Logger.cs",
+              "ToolTip": "D:\\Proj\\PlaywrightProj\\Logger.cs",
+              "RelativeToolTip": "Logger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T23:34:23.389Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +58,7 @@
               "RelativeDocumentMoniker": "Tests.cs",
               "ToolTip": "D:\\Proj\\PlaywrightProj\\Tests.cs",
               "RelativeToolTip": "Tests.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAwwDsAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowCwAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T15:14:18.999Z",
               "EditorCaption": ""

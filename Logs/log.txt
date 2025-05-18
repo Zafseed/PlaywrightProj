@@ -1,0 +1,34 @@
+
+[18.05.2025 20:08:13] 		Test ContentBlockIsVisible starts
+[18.05.2025 20:08:13] Block MacBook Air - Passed
+[18.05.2025 20:08:13] Block MacBook Pro - Passed
+[18.05.2025 20:08:13] Block iMac - Passed
+[18.05.2025 20:08:13] Block Mac mini - Passed
+[18.05.2025 20:08:13] Block Mac Studio - Passed
+[18.05.2025 20:08:13] Block Mac Pro - Passed
+[18.05.2025 20:08:13] Block Help Me Choose - Passed
+[18.05.2025 20:08:13] Block Compare - Passed
+[18.05.2025 20:08:13] Block Displays - Passed
+[18.05.2025 20:08:13] Block Accessories - Passed
+[18.05.2025 20:08:13] Block Sequoia - Passed
+[18.05.2025 20:08:13] Block Shop Mac - Passed
+[18.05.2025 20:08:13] 		Test ContentBlockIsVisible Ends
+[18.05.2025 20:09:58] 		Test ContentBlockIsVisible starts
+[18.05.2025 20:09:58] Block MacBook Air - Passed
+[18.05.2025 20:09:58] Block MacBook Pro - Passed
+[18.05.2025 20:09:58] Block iMac - Passed
+[18.05.2025 20:09:58] Block Mac mini - Passed
+[18.05.2025 20:09:58] Block Mac Studio - Passed
+[18.05.2025 20:09:58] Block Mac Pro - Passed
+[18.05.2025 20:09:58] Block Help Me Choose - Passed
+[18.05.2025 20:09:58] Block Compare - Passed
+[18.05.2025 20:09:58] Block Displays - Passed
+[18.05.2025 20:09:58] Block Accessories - Passed
+[18.05.2025 20:09:58] Block Sequoia - Passed
+[18.05.2025 20:09:58] Block Shop Mac - Passed
+[18.05.2025 20:09:58] 		Test ContentBlockIsVisible Ends
+[18.05.2025 20:10:21] 		Test ContentBlockIsVisible starts
+[18.05.2025 20:11:10] Block MacBook Air - Passed
+[18.05.2025 20:11:18] Block MacBook Pro - Passed
+[18.05.2025 20:11:27] Block iMac - Failed
+[18.05.2025 20:11:30] 		Test ContentBlockIsVisible Ends

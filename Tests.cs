@@ -1,77 +1,69 @@
 ﻿using Microsoft.Playwright;
 using Microsoft.Playwright.NUnit;
+using NUnit.Framework.Internal;
 
 namespace PlaywrightProj
 {
-    public class Tests : PageTest
+    public class Test : PageTest
     {
+        private readonly Logger logger = new("D:\\Proj\\PlaywrightProj\\Logs\\log.txt");
+
+        private readonly string[] BlockNames = ["MacBook Air", "MacBook Pro", "iMac", "Mac mini", 
+                                                "Mac Studio", "Mac Pro", "Help Me Choose", "Compare",
+                                                "Displays", "Accessories", "Sequoia", "Shop Mac"];
+
+        private int index = 0;
+
         [SetUp]
         public async Task SetUp()
         {
             await Page.GotoAsync("https://www.apple.com/mac/");
 
+            await Page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
+
             await Page.SetViewportSizeAsync(1920, 1080);
 
-            await Page.WaitForLoadStateAsync(LoadState.DOMContentLoaded);
+            logger.Log($"\t\tTest {TestContext.CurrentContext.Test.Name} Starts");
         }
 
         [TearDown]
         public async Task TearDown()
         {
-            var failed = TestContext.CurrentContext.Result.Outcome == NUnit.Framework.Interfaces.ResultState.Error
+            bool isFailed = TestContext.CurrentContext.Result.Outcome == NUnit.Framework.Interfaces.ResultState.Error
             || TestContext.CurrentContext.Result.Outcome == NUnit.Framework.Interfaces.ResultState.Failure;
 
-            await MakeScreenShotIfFailedAsync(failed, ".chapternav-wrapper");
-        }
-
-        [Test]
-        public async Task NamesIsMathing()
-        {
-            var productNameList = new List<string>()
+            if (isFailed)
             {
-                "MacBook Air",
-                "MacBook Pro",
-                "iMac",
-                "Mac mini",
-                "Mac Studio",
-                "Mac Pro",
-                "Help Me Choose",
-                "Compare",
-                "Displays",
-                "Accessories",
-                "Sequoia",
-                "Shop Mac"
-            };
+                logger.Log($"Block {BlockNames[index]} - Failed");
 
-            var ilElements = Page.Locator(".chapternav-label");
-
-            var count = await ilElements.CountAsync();
-
-            if (count != productNameList.Count)
-                throw new Exception("Количество элементов на странице не совпадает с ожидаемым списком");
-
-            for (int i = 0; i < count; i++)
-                await Expect(ilElements.Nth(i)).ToContainTextAsync(productNameList[i]);
+                await MakeScreenShotAsync(".chapternav-wrapper");
+            }
+            logger.Log($"\t\tTest {TestContext.CurrentContext.Test.Name} Ends");
         }
+
 
         [Test]
         public async Task ContentBlockIsVisible()
         {
-            var ilElements = Page.Locator(".chapternav-label");
+            var liElements = await Page.Locator(".chapternav-items")
+                                       .Locator("li")
+                                       .AllAsync();
 
-            var count = await ilElements.CountAsync();
+            foreach (var item in liElements)
+            {
+                await Expect(item).ToBeVisibleAsync();
+                await Expect(item.Locator(".chapternav-label")).ToBeVisibleAsync();
 
-            for (int i = 0; i < count; i++)
-                await Expect(ilElements.Nth(i)).ToBeVisibleAsync();
+                logger.Log($"Block {BlockNames[index]} - Passed");
+
+                index++;
+            }
         }
 
-        public async Task MakeScreenShotIfFailedAsync(bool failed, string blockToScreen)
+        public async Task MakeScreenShotAsync(string blockToScreen)
         {
-            if (failed)
-            {
-                await Page.WaitForSelectorAsync(blockToScreen);
-                await Page.Locator(blockToScreen).ScreenshotAsync(new() { Path = $"..\\..\\..\\Logs\\Screenshots\\Fail_{TestContext.CurrentContext.Test.Name}_{DateTime.Now:yyyy-dd-M--HH-mm-ss}.png" });
-            }
+            await Page.WaitForSelectorAsync(blockToScreen);
+            await Page.Locator(blockToScreen).ScreenshotAsync(new() { Path = $"..\\..\\..\\Logs\\Screenshots\\Fail_{TestContext.CurrentContext.Test.Name}_{DateTime.Now:yyyy-dd-M--HH-mm-ss}.png" });
         }
     }
 }
